@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<meta charset = "UTF-8">
+	<title>Student Application for Co-op Recommendation System</title>
+</head>
+<body> 
+	
+	<div class="container">
+		<h1>Student Application for Co-op Recommendation System</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Student</th>
+					<th>Major</th>
+					<th>GPA</th>
+					<th>Action</th>
+				</tr>
+				<tr>
+					<td><input class="form-control Student-input"></td>
+					<td><input class="form-control Major-input"></td>
+					<td><input class="form-control GPA-input"></td>
+					<td><button class="btn btn-primary add-record">Recommend</button></td>
+				</tr>
+			</thead>
+			<tbody class="records-list">
+				
+			</tbody>
+		</table>
+	</div>
+	<script type="text/template" class="records-list-template">
+
+		<td><span class="Student"><%= Student %></span></td>
+		<td><span class="Major"><%= Major %></span></td>
+		<td><span class="GPA"><%= GPA %></span></td>
+		<td><button class="btn btn-warning edit-record" >Edit</button>
+			<button class="btn btn-danger delete-record" >Delete</button>
+			<button class="btn btn-success update-record" style="display:none;">Update</button>
+			<button class="btn btn-danger cancel-update" style="display:none;">Cancel</button>
+		</td>	
+	</script>
+
+
+	<script src="jquery.js"></script>
+	<script src="underscore.js"></script>
+	<script src="backbone.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
